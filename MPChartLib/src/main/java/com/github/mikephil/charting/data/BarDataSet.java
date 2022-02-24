@@ -167,6 +167,22 @@ public class BarDataSet extends BarLineScatterCandleBubbleDataSet<BarEntry> impl
         }
     }
 
+    /**
+     * calculates the maximum stacksize that occurs in the Entries array of this
+     * DataSet
+     */
+    public void dummyCalcStackSize(List<BarEntry> yVals) {
+
+        for (int i = 0; i < yVals.size(); i++) {
+
+            float[] vals = yVals.get(i).getYVals();
+
+            if (vals != null && vals.length > mStackSize)
+                mStackSize = vals.length;
+        }
+    }
+
+
     @Override
     protected void calcMinMax(BarEntry e) {
 
@@ -296,4 +312,6 @@ public class BarDataSet extends BarLineScatterCandleBubbleDataSet<BarEntry> impl
     public String[] getStackLabels() {
         return mStackLabels;
     }
+
+
 }

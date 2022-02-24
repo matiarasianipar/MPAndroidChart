@@ -177,6 +177,28 @@ public class PieRadarChartTouchListener extends ChartTouchListener<PieRadarChart
         }
     }
 
+    public void dummySampleVelocity(float touchLocationX, float touchLocationY, long currentTime) {
+
+//        long currentTime = AnimationUtils.currentAnimationTimeMillis();
+
+        _velocitySamples.add(new AngularVelocitySample(currentTime, mChart.getAngleForPoint(touchLocationX, touchLocationY)));
+
+        // Remove samples older than our sample time - 1 seconds
+        for (int i = 0, count = _velocitySamples.size(); i < count - 2; i++) {
+            if (currentTime - _velocitySamples.get(i).time > 1000) {
+                _velocitySamples.remove(0);
+                i--;
+                count--;
+            } else {
+                break;
+            }
+        }
+    }
+
+    public ArrayList<AngularVelocitySample> getVelocitySamples(){
+    return this._velocitySamples;
+    }
+
     private float calculateVelocity() {
 
         if (_velocitySamples.isEmpty())
@@ -275,7 +297,7 @@ public class PieRadarChartTouchListener extends ChartTouchListener<PieRadarChart
             stopDeceleration();
     }
 
-    private class AngularVelocitySample {
+    public class AngularVelocitySample {
 
         public long time;
         public float angle;
