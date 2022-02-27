@@ -179,7 +179,6 @@ public class PieRadarChartTouchListener extends ChartTouchListener<PieRadarChart
 
     public void dummySampleVelocity(float touchLocationX, float touchLocationY, long currentTime) {
 
-//        long currentTime = AnimationUtils.currentAnimationTimeMillis();
 
         _velocitySamples.add(new AngularVelocitySample(currentTime, mChart.getAngleForPoint(touchLocationX, touchLocationY)));
 
