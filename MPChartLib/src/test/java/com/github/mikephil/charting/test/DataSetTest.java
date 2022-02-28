@@ -1,9 +1,12 @@
 package com.github.mikephil.charting.test;
 
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.DataSet;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.ScatterDataSet;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -17,6 +20,7 @@ import static junit.framework.Assert.assertTrue;
  * Created by philipp on 31/05/16.
  */
 public class DataSetTest {
+
 
     @Test
     public void testCalcMinMax() {
