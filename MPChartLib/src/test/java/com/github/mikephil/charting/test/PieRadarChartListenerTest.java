@@ -31,6 +31,7 @@ import androidx.annotation.Nullable;
 import com.github.mikephil.charting.charts.PieRadarChartBase;
 import com.github.mikephil.charting.listener.PieRadarChartTouchListener;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.File;
@@ -40,7 +41,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class ListenerTest {
+public class PieRadarChartListenerTest {
     @Test
     public void sampleVelocityTest(){
         Context myContext = new Context() {
@@ -591,8 +592,8 @@ public class ListenerTest {
         };
         PieRadarChartTouchListener pieListener = new PieRadarChartTouchListener(myBase);
         pieListener.dummySampleVelocity(1f,1f,1l);
-        System.out.println(pieListener.getVelocitySamples().get(0).time);
-        System.out.println("??");
+        long velocity = pieListener.getVelocitySamples().get(0).time;
+        Assert.assertEquals(1,velocity);
     }
 
 }
