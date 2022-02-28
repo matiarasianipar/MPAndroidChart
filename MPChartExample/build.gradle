@@ -1,9 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    lintOptions {
-        abortOnError false
-    }
+
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.xxmassdeveloper.mpchartexample"
@@ -26,4 +24,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:1.0.2"
     implementation 'com.google.android.material:material:1.0.0'
     implementation project(':MPChartLib')
+    compile group: 'org.mockito', name: 'mockito-core', version: '2.22.0'
+    testImplementation 'org.mockito:mockito-core:2.6.3'
+    androidTestImplementation 'org.mockito:mockito-android:2.6.3'
 }
