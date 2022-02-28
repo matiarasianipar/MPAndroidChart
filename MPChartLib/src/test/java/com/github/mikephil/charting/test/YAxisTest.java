@@ -85,7 +85,7 @@ public class YAxisTest {
 
         YAxis yAxisMock = mock(YAxis.class);
         YAxis spy = Mockito.spy(new YAxis());
-        when(spy.getLongestLabel()).thenReturn("........");
+        when(spy.getLongestLabel()).thenReturn(".......");
 
         float output = spy.getRequiredHeightSpace(p);
         verify(spy).getLongestLabel();
