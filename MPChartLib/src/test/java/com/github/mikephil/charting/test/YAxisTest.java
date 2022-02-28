@@ -79,21 +79,21 @@ public class YAxisTest {
 
 
 
-//    @Test
-//    public void mockGetLongestLabelInRequiredHeightSpace(){
-//        Paint p = new Paint();
-//
-//        YAxis yAxisMock = mock(YAxis.class);
-//        YAxis spy = Mockito.spy(new YAxis());
-//        when(spy.getLongestLabel()).thenReturn(".......");
-//
-//        float output = spy.getRequiredHeightSpace(p);
-//        verify(spy).getLongestLabel();
-//        verifyNoMoreInteractions(yAxisMock);
-//
-//        Assert.assertEquals(0.0, output,0);
-//
-//    }
+    @Test
+    public void mockGetLongestLabelInRequiredHeightSpace(){
+        Paint p = new Paint();
+
+        YAxis yAxisMock = mock(YAxis.class);
+        YAxis spy = Mockito.spy(new YAxis());
+        when(spy.getLongestLabel()).thenReturn(".......");
+
+        float output = spy.getRequiredHeightSpace(p);
+        verify(spy).getLongestLabel();
+        verifyNoMoreInteractions(yAxisMock);
+
+        Assert.assertEquals(0.0, output,0);
+
+    }
 
 }
 
