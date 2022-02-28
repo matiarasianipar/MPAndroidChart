@@ -23,28 +23,6 @@ public class DataSetTest {
 
 
     @Test
-    public void testNewCalcStackSizePublicMethod(){
-        List<BarEntry> listofBarEntries = new ArrayList<>();
-        float x = 2f;
-        float[] vals ={1f,2f};
-        float x2 = 2f;
-        float[] vals2 = {1f};
-        BarEntry barEntry1 = new BarEntry(x,vals);
-        BarEntry barEntry2 = new BarEntry(x,vals);
-        listofBarEntries.add(barEntry1);
-        listofBarEntries.add(barEntry2);
-        BarDataSet myBarDataSet = new BarDataSet(listofBarEntries,null);
-
-        myBarDataSet.dummyCalcStackSize(listofBarEntries);
-//      call getter
-        int stackSize = myBarDataSet.getStackSize();
-        System.out.println(stackSize);
-        Assert.assertEquals(2,stackSize);
-
-    }
-
-
-    @Test
     public void testCalcMinMax() {
 
         List<Entry> entries = new ArrayList<Entry>();

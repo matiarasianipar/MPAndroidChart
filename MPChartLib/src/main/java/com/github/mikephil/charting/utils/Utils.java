@@ -161,9 +161,10 @@ public abstract class Utils {
 
         Rect r = mCalcTextHeightRect;
         r.set(0,0,0,0);
+
         paint.getTextBounds(demoText, 0, demoText.length(), r);
-        r.set(1,4,6,7);
-        System.out.println("r is" + r);
+
+
         return r.height();
     }
 
