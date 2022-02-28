@@ -26,9 +26,9 @@ android {
 dependencies {
     implementation 'androidx.annotation:annotation:1.0.0'
     testImplementation 'junit:junit:4.12'
-    compile group: 'org.mockito', name: 'mockito-core', version: '2.22.0'
-    testImplementation 'org.mockito:mockito-core:2.6.3'
-    androidTestImplementation 'org.mockito:mockito-android:2.6.3'
+//    compile group: 'org.mockito', name: 'mockito-core', version: '2.22.0'
+//    testImplementation 'org.mockito:mockito-core:2.6.3'
+//    androidTestImplementation 'org.mockito:mockito-android:2.6.3'
 }
 
 task sourcesJar(type: Jar) {
