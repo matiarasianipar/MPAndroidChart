@@ -18,7 +18,7 @@ import org.mockito.Mockito;
 public class YAxisTest {
     //  calculate the offset between boarder of graph and the graph itself.
     @Test
-    public void testComputeAxisValues() {
+    public void getRequiredWidthSpace() {
         YAxis yAxis = new YAxis();
         Paint p = new Paint();
         Float widthSpace = yAxis.getRequiredWidthSpace(p);
