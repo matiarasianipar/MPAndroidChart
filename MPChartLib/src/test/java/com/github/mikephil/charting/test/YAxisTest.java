@@ -9,7 +9,10 @@ import static org.mockito.Mockito.when;
 
 import android.graphics.Paint;
 
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.renderer.XAxisRenderer;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -99,13 +102,11 @@ public class YAxisTest {
     public void mockGetLongestLabelInRequiredHeightSpace(){
         Paint p = new Paint();
 
-        YAxis yAxisMock = mock(YAxis.class);
         YAxis spy = Mockito.spy(new YAxis());
         when(spy.getLongestLabel()).thenReturn(".......");
 
         float output = spy.getRequiredHeightSpace(p);
         verify(spy).getLongestLabel();
-        verifyNoMoreInteractions(yAxisMock);
 
         Assert.assertEquals(0.0, output,0);
 
